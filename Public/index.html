@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06b6d4">
+  <meta name="description" content="دانشجویان؛ کتابخانه آموزشی چندزبانه برای دانشجویان افغانستان">
+  <title>دانشجویان | همه درس‌ها، یک‌جا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="announcement"><span class="pulse"></span><span data-i18n="banner">یک فضای مشترک برای یادگیری دانشجویان افغانستان</span></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="دانشجویان">
+      <span class="brand-mark">د</span><span class="brand-name">دانشجویان<span class="brand-dot">.</span><small data-i18n="brandSub">جامعه یادگیری افغانستان</small></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#universities" data-i18n="navUniversities">دانشگاه‌ها</a>
+      <a href="#programs" data-i18n="navPrograms">رشته‌ها</a>
+      <a href="#library" data-i18n="navLibrary">کتابخانه درسی</a>
+    </nav>
+    <div class="top-actions">
+      <label class="language-wrap"><span class="sr-only">Language</span><select id="languageSelect" aria-label="Language"><option value="fa">فارسی / دری</option><option value="ps">پښتو</option><option value="en">English</option></select></label>
+      <button id="authButton" class="button button-outline" data-i18n="login">ورود</button>
+      <button id="profileButton" class="avatar-button hidden" title="Profile">●</button>
+      <button id="mobileMenu" class="icon-button" aria-label="Menu">☰</button>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span>✦</span> <span data-i18n="heroEyebrow">یادگیری، بدون مرز</span></div>
+        <h1 data-i18n="heroTitle">همه درس‌هایت،<br><span>یک‌جا و همیشه همراهت.</span></h1>
+        <p data-i18n="heroText">دانشگاه، رشته و سمسترت را انتخاب کن؛ جزوه‌ها، منابع و محتوای درسی را در یک کتابخانه منظم پیدا کن.</p>
+        <div class="hero-search">
+          <span class="search-icon">⌕</span><input id="globalSearch" type="search" data-i18n-placeholder="searchPlaceholder" placeholder="نام دانشگاه، رشته یا مضمون را جست‌وجو کن...">
+          <button id="searchButton" class="button button-primary" data-i18n="search">جست‌وجو</button>
+        </div>
+        <div class="hero-trust"><span class="check">✓</span><span data-i18n="heroTrust">رایگان برای شروع · ساخته‌شده برای دانشجویان افغانستان</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-card art-main"><div class="art-top"><span class="art-icon cyan">▤</span><span class="art-menu">•••</span></div><div class="art-title">Computer Science</div><div class="art-sub">Semester 01 · Learning space</div><div class="progress-label"><span>Study progress</span><b>72%</b></div><div class="progress"><i></i></div><div class="mini-courses"><span>⌘ Programming</span><span>∑ Mathematics</span><span>文 English</span></div></div>
+        <div class="floating-note note-top"><span class="note-icon purple">✎</span><span><b data-i18n="artNoteTitle">جزوه‌های مرتب</b><small data-i18n="artNoteSub">همه‌چیز در دسترس</small></span></div>
+        <div class="floating-note note-bottom"><span class="note-icon orange">✓</span><span><b data-i18n="artApprovedTitle">محتوای بررسی‌شده</b><small data-i18n="artApprovedSub">یادگیری مطمئن‌تر</small></span></div>
+        <div class="art-spark spark-one">✦</div><div class="art-spark spark-two">✧</div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div><span class="stat-icon stat-cyan">⌂</span><span><b id="statUniversities">—</b><small data-i18n="statUniversities">دانشگاه‌ها</small></span></div>
+      <div><span class="stat-icon stat-purple">▦</span><span><b id="statPrograms">—</b><small data-i18n="statPrograms">رشته‌های آموزشی</small></span></div>
+      <div><span class="stat-icon stat-orange">▤</span><span><b id="statCourses">—</b><small data-i18n="statCourses">مضمون‌ها</small></span></div>
+      <div><span class="stat-icon stat-green">◎</span><span><b>۳</b><small data-i18n="statLanguages">زبان</small></span></div>
+    </section>
+
+    <section id="universities" class="section-block">
+      <div class="section-heading"><div><span class="section-kicker" data-i18n="discover">کاوش کن</span><h2 data-i18n="universitiesTitle">دانشگاهت را پیدا کن</h2><p data-i18n="universitiesText">از دانشگاه خود شروع کن و به منابع رشته‌ات برس.</p></div><span class="heading-decoration">✳</span></div>
+      <div id="universityGrid" class="university-grid"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
+    </section>
+
+    <section id="programs" class="section-block section-tinted">
+      <div class="section-heading"><div><span class="section-kicker" data-i18n="learningPaths">مسیرهای یادگیری</span><h2 data-i18n="programsTitle">رشته‌ها، دسته‌بندی‌شده و آماده مطالعه</h2><p data-i18n="programsText">رشته را انتخاب کن تا سمسترها و مضمون‌ها را ببینی.</p></div><div class="filter-wrap"><span>⌕</span><input id="programFilter" type="search" data-i18n-placeholder="filterPrograms" placeholder="جست‌وجوی رشته..."></div></div>
+      <div id="programGrid" class="program-grid"><div class="loading-card"></div><div class="loading-card"></div><div class="loading-card"></div></div>
+    </section>
+
+    <section id="library" class="section-block">
+      <div class="section-heading"><div><span class="section-kicker" data-i18n="sharedKnowledge">دانش مشترک</span><h2 data-i18n="libraryTitle">تازه‌های کتابخانه درسی</h2><p data-i18n="libraryText">منابعی که پس از بررسی برای دانشجویان منتشر شده‌اند.</p></div><button id="uploadButton" class="button button-soft" data-i18n="shareResource">＋ اشتراک‌گذاری منبع</button></div>
+      <div id="resourceList" class="resource-list"><div class="empty-state"><span>▤</span><b data-i18n="noResources">هنوز منبعی منتشر نشده است</b><p data-i18n="noResourcesText">اولین منبع آموزشی را به کتابخانه اضافه کن.</p></div></div>
+    </section>
+
+    <section class="community-cta"><div class="cta-symbol">✦</div><div><h2 data-i18n="ctaTitle">دانش وقتی تقسیم شود، رشد می‌کند.</h2><p data-i18n="ctaText">به جامعه دانشجویان بپیوند و منابع مفید را با دیگران به اشتراک بگذار.</p></div><button id="ctaAuthButton" class="button button-white" data-i18n="joinNow">همین حالا بپیوند</button></section>
+  </main>
+  <footer class="footer"><a class="brand footer-brand" href="#"><span class="brand-mark">د</span><span class="brand-name">دانشجویان<span class="brand-dot">.</span><small data-i18n="brandSub">جامعه یادگیری افغانستان</small></span></a><span data-i18n="footerText">ساخته‌شده برای مسیر یادگیری تو.</span><div class="footer-links"><a href="#universities" data-i18n="navUniversities">دانشگاه‌ها</a><a href="#programs" data-i18n="navPrograms">رشته‌ها</a><a href="#library" data-i18n="navLibrary">کتابخانه</a></div></footer>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <section id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button id="closeModal" class="modal-close" aria-label="Close">×</button><div id="modalContent"></div></section>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
